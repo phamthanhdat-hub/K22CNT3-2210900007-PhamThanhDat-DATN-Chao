@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="css/dathang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🍲 Baby Cutie</div>
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang Chủ</a></li>
+                <li><a href="vect.html">Về Chúng Tôi</a></li>
+                <li><a href="thucdon.html">Thực Đơn</a></li>
+                <li><a href="dathang.html"class="active">Đặt Hàng</a></li>
+                <li><a href="lienhe.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="form-section">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Đặt Hàng Ngay</h2>
+        <form class="order-form">
+            <label for="name">👤 Họ và tên</label>
+            <input type="text" id="name" placeholder="Nhập họ và tên" required>
+
+            <label for="phone">📞 Số điện thoại</label>
+            <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+
+            <label for="address">🏠 Địa chỉ giao hàng</label>
+            <textarea id="address" placeholder="Nhập địa chỉ" required></textarea>
+
+            <label for="product">🍲 Chọn món</label>
+            <select id="product" required>
+                <option value="">-- Chọn món cháo --</option>
+                <option>Cháo Gà Rau Củ - 25.000đ</option>
+                <option>Cháo Thịt Bò - 30.000đ</option>
+                <option>Cháo Cá Hồi - 35.000đ</option>
+                <option>Cháo Tôm Bí Đỏ - 28.000đ</option>
+                <option>Cháo Thịt Bằm Hạt Sen - 22.000đ</option>
+                <option>Cháo Lươn - 33.000đ</option>
+                <option>Cháo Bào Ngư - 50.000đ</option>
+                <option>Cháo Ếch - 45.000đ</option>
+            </select>
+
+            <label for="quantity">🔢 Số lượng</label>
+            <input type="number" id="quantity" min="1" value="1">
+
+            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Gửi đơn hàng</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>THÔNG TIN CHUNG</h4>
+                <p><b>Cháo Dinh Dưỡng Baby Cutie</b></p>
+                <p><i class="fa-solid fa-phone"></i> 0378.630.848</p>
+                <p><i class="fa-solid fa-envelope"></i> babycuti@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Giao Hòa - Nam Định</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <ul>
+                    <li><a href="trangchu.html">Trang Chủ</a></li>
+                    <li><a href="vect.html">Về Chúng Tôi</a></li>
+                    <li><a href="thucdon.html">Thực đơn</a></li>
+                    <li><a href="dathang.html">Đặt hàng</a></li>
+                    <li><a href="lienhe.html">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    <a href="#"><i class="fa-brands fa-zalo"></i></a>
+                    <a href="mailto:babycuti@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/BoCongThuong.png" alt="Bộ Công Thương" class="certify-logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Cháo Dinh Dưỡng Baby Cutie | All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- Popup Đăng nhập (Note: HTML for popup is missing, so adding a basic structure) -->
+    <div id="loginPopup" class="login-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3><i class="fa-solid fa-user"></i> Đăng nhập</h3>
+            <input type="text" placeholder="Tên đăng nhập" required>
+            <input type="password" placeholder="Mật khẩu" required>
+            <button class="btn-login">Đăng nhập</button>
+        </div>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const popup = document.getElementById('loginPopup');
+        const closePopup = document.querySelector('.close');
+
+        loginBtn.addEventListener('click', () => popup.style.display = 'flex');
+        closePopup.addEventListener('click', () => popup.style.display = 'none');
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) popup.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
