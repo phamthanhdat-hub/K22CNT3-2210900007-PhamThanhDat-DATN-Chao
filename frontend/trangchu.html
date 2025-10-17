@@ -61,24 +61,31 @@
         <h3>Cháo cá hồi bí đỏ</h3>
         <p>Giàu DHA - thơm ngon bổ dưỡng</p>
         <span class="price">35.000 VNĐ</span>
+        <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Mua ngay</button>
       </div>
+
       <div class="product-item">
         <img src="images/thit.jpg" alt="Cháo thịt bằm">
         <h3>Cháo thịt bằm rau củ</h3>
         <p>Cung cấp vitamin và năng lượng</p>
         <span class="price">30.000 VNĐ</span>
+        <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Mua ngay</button>
       </div>
+
       <div class="product-item">
         <img src="images/ga.jpg" alt="Cháo gà ngô non">
         <h3>Cháo gà ngô non</h3>
         <p>Hương vị tự nhiên – dễ tiêu hóa</p>
         <span class="price">32.000 VNĐ</span>
+        <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Mua ngay</button>
       </div>
+
       <div class="product-item">
         <img src="images/tom.jpg" alt="Cháo bí xanh tôm nõn">
         <h3>Cháo bí xanh tôm nõn</h3>
         <p>Thơm mát, cung cấp dưỡng chất</p>
         <span class="price">33.000 VNĐ</span>
+        <button class="btn-buy"><i class="fa-solid fa-cart-shopping"></i> Mua ngay</button>
       </div>
     </div>
   </section>
@@ -113,7 +120,6 @@
           <a href="#"><i class="fa-brands fa-zalo"></i></a>
           <a href="mailto:babycuti@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <img src="https://www.vietnamsafefood.com/" alt="An Toàn Thực Phẩm" class="certify-logo">
       </div>
     </div>
 
@@ -123,16 +129,57 @@
   </footer>
 
   <!-- ===== POPUP ĐĂNG NHẬP ===== -->
+  <div id="loginPopup" class="login-popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Đăng nhập tài khoản</h2>
+      <form class="login-form">
+        <div class="form-group">
+          <label for="username">Tài khoản</label>
+          <input type="text" id="username" placeholder="Nhập tên đăng nhập..." required>
+        </div>
+        <div class="form-group">
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" placeholder="Nhập mật khẩu..." required>
+        </div>
+        <button type="submit" class="btn-login-submit">Đăng nhập</button>
+        <p class="register-link">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+      </form>
+    </div>
+  </div>
 
+  <!-- ===== SCRIPT XỬ LÝ ===== -->
   <script>
-    const loginBtn = document.getElementById('loginBtn');
-    const popup = document.getElementById('loginPopup');
-    const closePopup = document.querySelector('.close');
+    const loginBtn = document.getElementById("loginBtn");
+    const loginPopup = document.getElementById("loginPopup");
+    const closePopup = document.querySelector(".close");
 
-    loginBtn.addEventListener('click', () => popup.style.display = 'flex');
-    closePopup.addEventListener('click', () => popup.style.display = 'none');
-    window.addEventListener('click', (e) => {
-      if (e.target === popup) popup.style.display = 'none';
+    // Hiển thị popup
+    loginBtn.addEventListener("click", () => {
+      loginPopup.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+
+    // Đóng popup khi bấm X
+    closePopup.addEventListener("click", () => {
+      loginPopup.style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+
+    // Đóng popup khi click ra ngoài
+    window.addEventListener("click", (e) => {
+      if (e.target === loginPopup) {
+        loginPopup.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    // Xử lý submit form
+    document.querySelector(".login-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Đăng nhập thành công 🎉");
+      loginPopup.style.display = "none";
+      document.body.style.overflow = "auto";
     });
   </script>
 
