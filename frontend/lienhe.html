@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liên hệ - Cháo Dinh Dưỡng Baby Cutie</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/lienhe.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
   <!-- ===== HEADER ===== -->
-  <header class="header">
+  <header class="header" id="mainHeader">
     <div class="logo">🍲 BABY CUTIE</div>
     <nav>
       <ul>
@@ -19,6 +22,7 @@
         <li><a href="thucdon.html">Thực Đơn</a></li>
         <li><a href="dathang.html">Đặt Hàng</a></li>
         <li><a href="lienhe.html" class="active">Liên hệ</a></li>
+        <li><a href="tintuc.html">Tin Tức</a></li>
       </ul>
     </nav>
   </header>
@@ -38,13 +42,14 @@
       </div>
       <div class="contact-form">
         <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
-        <form>
-         <input type="text" placeholder="Họ tên" required>
-          <input type="email" placeholder="Email" required>
-          <input type="text" placeholder="Số điện thoại" required>
-          <textarea placeholder="Nội dung" required></textarea>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Họ tên" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="text" id="phone" placeholder="Số điện thoại" required>
+          <textarea id="message" placeholder="Nội dung" required></textarea>
           <button type="submit">GỬI</button>
         </form>
+        <p id="formStatus" class="form-status"></p>
       </div>
     </div>
   </section>
@@ -69,6 +74,7 @@
           <li><a href="thucdon.html">Thực đơn</a></li>
           <li><a href="dathang.html">Đặt hàng</a></li>
           <li><a href="lienhe.html">Liên hệ</a></li>
+          <li><a href="tintuc.html">Tin Tức</a></li>
         </ul>
       </div>
 
@@ -78,7 +84,7 @@
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
 
-          <!-- ✅ ICON ZALO (SVG thay cho Font Awesome) -->
+          <!-- ICON ZALO -->
           <a href="https://zalo.me/0378630848" target="_blank" class="zalo-icon">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
           </a>
@@ -96,5 +102,7 @@
     </div>
   </footer>
 
+  <!-- JS -->
+  <script src="js/lienhe.js"></script>
 </body>
 </html>

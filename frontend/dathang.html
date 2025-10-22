@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Hàng - Baby Cutie</title>
     <link rel="stylesheet" href="css/dathang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -12,8 +15,9 @@
                 <li><a href="trangchu.html">Trang Chủ</a></li>
                 <li><a href="vect.html">Về Chúng Tôi</a></li>
                 <li><a href="thucdon.html">Thực Đơn</a></li>
-                <li><a href="dathang.html"class="active">Đặt Hàng</a></li>
+                <li><a href="dathang.html" class="active">Đặt Hàng</a></li>
                 <li><a href="lienhe.html">Liên Hệ</a></li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
             </ul>
         </nav>
     </div>
@@ -68,6 +72,7 @@
                     <li><a href="thucdon.html">Thực đơn</a></li>
                     <li><a href="dathang.html">Đặt hàng</a></li>
                     <li><a href="lienhe.html">Liên hệ</a></li>
+                    <li><a href="tintuc.html">Tin Tức</a></li>
                 </ul>
             </div>
 
@@ -87,7 +92,7 @@
         </div>
     </footer>
 
-    <!-- Popup Đăng nhập (Note: HTML for popup is missing, so adding a basic structure) -->
+    <!-- Popup Đăng nhập -->
     <div id="loginPopup" class="login-popup">
         <div class="popup-content">
             <span class="close">&times;</span>
@@ -98,16 +103,6 @@
         </div>
     </div>
 
-    <script>
-        const loginBtn = document.getElementById('loginBtn');
-        const popup = document.getElementById('loginPopup');
-        const closePopup = document.querySelector('.close');
-
-        loginBtn.addEventListener('click', () => popup.style.display = 'flex');
-        closePopup.addEventListener('click', () => popup.style.display = 'none');
-        window.addEventListener('click', (e) => {
-            if (e.target === popup) popup.style.display = 'none';
-        });
-    </script>
+    <script src="js/dathang.js"></script>
 </body>
 </html>
