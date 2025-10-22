@@ -116,7 +116,7 @@ nav a:hover, nav a.active {
 
 /* ===== BANNER ===== */
 .banner {
-  background: url('images/trem.jpg') center/cover no-repeat;
+  background: url('frontend/images/trem.jpg') center/cover no-repeat;
   height: 500px;
   display: flex;
   align-items: center;
