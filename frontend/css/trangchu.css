@@ -114,9 +114,26 @@ nav a:hover, nav a.active {
   transform: translateY(-2px);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #e04ae0;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+  border-radius: 70%;
+  object-fit: cover;
+}
+
 /* ===== BANNER ===== */
 .banner {
-  background: url('frontend/images/trem.jpg') center/cover no-repeat;
+  background: url('images/logo2.png') center/cover no-repeat;
   height: 500px;
   display: flex;
   align-items: center;
