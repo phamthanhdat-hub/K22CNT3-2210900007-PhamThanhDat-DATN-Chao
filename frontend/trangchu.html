@@ -36,13 +36,13 @@
   </header>
 
   <!-- ===== BANNER ===== -->
-  <section class="banner">
+  <section id="mainBanner" class="banner">
     <div class="banner-content">
-      <h1>Thế Giới Cháo Dinh Dưỡng Số 1 Việt Nam</h1>
-      <p>Chăm sóc sức khỏe và dinh dưỡng cho bé yêu từng muỗng cháo thơm ngon, an toàn và chất lượng.</p>
-      <a href="#" class="btn-main">Liên hệ ngay</a>
+        <h1>Thế Giới Cháo Dinh Dưỡng Số 1 Việt Nam</h1>
+        <p>Chăm sóc sức khỏe và dinh dưỡng cho bé yêu từng muỗng cháo thơm ngon, an toàn và chất lượng.</p>
+        <a href="trangchu.html" class="btn-main">Liên hệ ngay</a>
     </div>
-  </section>
+</section>
 
   <!-- ===== DANH MỤC ===== -->
   <section class="category">
@@ -52,8 +52,7 @@
       <div class="cat-item"><img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png"><p>Cháo người lớn</p></div>
       <div class="cat-item"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png"><p>Cháo dinh dưỡng</p></div>
       <div class="cat-item"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046791.png"><p>Cháo ăn dặm</p></div>
-      <div class="cat-item"><img src="https://cdn-icons-png.flaticon.com/512/4379/4379415.png"><p>Combo cháo</p></div>
-      <div class="cat-item"><img src="https://cdn-icons-png.flaticon.com/512/3014/3014884.png"><p>Ngũ cốc / Sinh tố</p></div>
+    
     </div>
   </section>
 
@@ -121,9 +120,9 @@
       <div class="footer-col">
         <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
         <div class="social-links">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
-          <a href="#"><i class="fa-brands fa-zalo"></i></a>
+          <a href="https://www.facebook.com/share/17Fi85PGdz/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tiktok.com/@phamthanhdat2k4"><i class="fa-brands fa-tiktok"></i></a>
           <a href="mailto:babycuti@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
@@ -135,26 +134,54 @@
   </footer>
 
   <!-- ===== POPUP ĐĂNG NHẬP ===== -->
-  <div id="loginPopup" class="login-popup">
+ <div id="authPopup" class="auth-popup">
     <div class="popup-content">
-      <span class="close">&times;</span>
-      <h2>Đăng nhập tài khoản</h2>
-      <form class="login-form">
-        <div class="form-group">
-          <label for="username">Tài khoản</label>
-          <input type="text" id="username" placeholder="Nhập tên đăng nhập..." required>
+        <span class="close-btn">&times;</span>
+        
+        <div id="loginForm" class="auth-form active-form">
+            <h2>Đăng nhập tài khoản</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="login-username">Tài khoản</label>
+                    <input type="text" id="login-username" placeholder="Nhập tên đăng nhập..." required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Mật khẩu</label>
+                    <input type="password" id="login-password" placeholder="Nhập mật khẩu..." required>
+                </div>
+                <button type="submit" class="btn-submit">Đăng nhập</button>
+            </form>
+            <p class="switch-link">Chưa có tài khoản? <a href="#" id="switchToRegister">Đăng ký ngay</a></p>
         </div>
-        <div class="form-group">
-          <label for="password">Mật khẩu</label>
-          <input type="password" id="password" placeholder="Nhập mật khẩu..." required>
+
+        <div id="registerForm" class="auth-form">
+            <h2>Đăng ký tài khoản mới</h2>
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="reg-name">Tên của bạn</label>
+                    <input type="text" id="reg-name" placeholder="Tên của bạn..." required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="Email của bạn..." required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Mật khẩu</label>
+                    <input type="password" id="reg-password" placeholder="Tạo mật khẩu..." required>
+                </div>
+                <button type="submit" class="btn-submit">Đăng ký</button>
+            </form>
+            <p class="switch-link">Đã có tài khoản? <a href="#" id="switchToLogin">Đăng nhập</a></p>
         </div>
-        <button type="submit" class="btn-login-submit">Đăng nhập</button>
-        <p class="register-link">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
-      </form>
+        
     </div>
-  </div>
+</div>
 
   <!-- JS -->
   <script src="js/trangchu.js"></script>
+  <script src="js/vect.js"></script>
+  <script src="js/dathang.js"></script>
+  <script src="js/thucdon.js"></script>
+  <script src="js/lienhe.js"></script>
 </body>
 </html>
